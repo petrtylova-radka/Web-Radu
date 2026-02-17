@@ -457,15 +457,24 @@ nav .container {
     margin-bottom: var(--spacing-xl);
     position: relative;
     z-index: 1;
+    opacity: 0;
+    /* Hidden initially for animation */
+    transition: all 0.8s ease-out;
 }
 
-/* Alternating layout */
+/* Step 1 & 3 (Odd): Content Left, Spacer Right */
 .service-step:nth-child(odd) {
-    flex-direction: row;
+    transform: translateX(-50px);
 }
 
+/* Step 2 (Even): Spacer Left, Content Right */
 .service-step:nth-child(even) {
-    flex-direction: row-reverse;
+    transform: translateX(50px);
+}
+
+.service-step.revealed {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .service-step:last-child {
@@ -488,12 +497,15 @@ nav .container {
     border-color: var(--color-primary);
 }
 
+/* Text Alignments */
 .service-step:nth-child(odd) .service-content {
     text-align: right;
+    /* Aligned towards center line */
 }
 
 .service-step:nth-child(even) .service-content {
     text-align: left;
+    /* Aligned towards center line */
 }
 
 /* Step Marker (Circle on the line) */
@@ -513,6 +525,13 @@ nav .container {
     color: var(--color-primary);
     box-shadow: 0 0 0 10px #fafafa;
     /* Fake spacing/masking around line */
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
+
+.service-step.revealed .service-marker {
+    transform: translateX(-50%) scale(1.1);
+    /* Pop animation */
 }
 
 /* Bonus Badge for Podcast */
@@ -530,19 +549,79 @@ nav .container {
     transform: rotate(10deg);
 }
 
+/* Service Content Text */
+.service-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-content p {
+    font-size: 1.15rem;
+    /* Increased from default */
+    line-height: 1.6;
+    color: var(--color-text-light);
+}
+
+/* Service Floating Elements (High Contrast) */
+.service-float {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-float-1 {
+    width: 120px;
+    height: 120px;
+    background: var(--color-primary);
+    /* Contrast purple */
+    top: 15%;
+    right: 15%;
+    /* Empty space opposite Step 1 */
+    animation-delay: 0s;
+}
+
+.service-float-2 {
+    width: 80px;
+    height: 80px;
+    background: #FFD700;
+    /* Contrast gold/yellow */
+    top: 50%;
+    left: 15%;
+    /* Empty space opposite Step 2 */
+    animation-delay: 2s;
+}
+
+.service-float-3 {
+    width: 100px;
+    height: 100px;
+    background: var(--color-secondary);
+    border: 3px solid var(--color-primary);
+    /* Contrast border */
+    bottom: 10%;
+    right: 20%;
+    /* Empty space opposite Step 3 */
+    animation-delay: 4s;
+}
+
 @media (max-width: 768px) {
     .service-path::before {
         left: 30px;
     }
 
     .service-step {
-        flex-direction: column;
+        flex-direction: column !important;
+        /* Force column on mobile */
         align-items: flex-start;
         padding-left: 80px;
+        transform: translateY(20px) !important;
+        /* Slide up on mobile */
     }
 
     .service-step:nth-child(even) {
-        flex-direction: column;
+        /* No specific override needed if column */
     }
 
     .service-marker {
@@ -552,6 +631,11 @@ nav .container {
     .service-content {
         width: 100%;
         text-align: left !important;
+    }
+
+    .service-float {
+        display: none;
+        /* Hide on mobile to avoid clutter */
     }
 }
 
