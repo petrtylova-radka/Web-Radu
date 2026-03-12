@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.glass, .bento-item, .service-step').forEach(el => {
+    document.querySelectorAll('.glass, .bento-item, .service-step, .event-card').forEach(el => {
         // el.style.opacity = '0'; // Handled in CSS now for service-step
         // el.style.transform = 'translateY(20px)';
         // el.style.transition = 'all 0.6s ease-out';

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "name": "Megakce",
+    "show": "Yes",
+    "date": "February 26, 2026",
+    "place": "Rašova 836/6, Praha 11",
+    "description": "Otestujte si, jestli dává smysl napojit Notion databázi jako klientský backend.",
+    "button": "Přihlásit se",
+    "link": "https://forms.gle/ZE6ELr2FSEpZ6eYp7",
+    "image": "https://images.unsplash.com/photo-1540575861501-7ce0e2352a29?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    "id": "2",
+    "name": "Neakce",
+    "show": "Yes",
+    "date": "March 12, 2026",
+    "place": "Online",
+    "description": "Tady už to fakt půjde dobře. Vše si prakticky vyzkoušíme a propojíme systémy tak, aby vám to ušetřilo čas.",
+    "button": "Koupit",
+    "link": "https://karolinamelinova.cz/",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    "id": "3",
+    "name": "Poslední akcička",
+    "show": "Yes",
+    "date": "March 4, 2026",
+    "place": "Praha",
+    "description": "Bude to nejnejnej setkání roku. Těším se na vás všechny v Praze!",
+    "button": "Jedu",
+    "link": "https://komunike.cz/",
+    "image": "https://karolinamelinova.cz/wp-content/uploads/2025/12/1.png"
+  },
+  {
+    "id": "4",
+    "name": "testovací akce",
+    "show": "Yes",
+    "date": "March 12, 2026",
+    "place": "Odry",
+    "description": "Pojďme si popovídat o technických systémech a jak vám mohou usnadnit život v online podnikání.",
+    "button": "Jsem tam",
+    "link": "https://www.facebook.com/",
+    "image": "https://images.unsplash.com/photo-1475721027785-f74dea327912?auto=format&fit=crop&q=80&w=800"
+  }
+]
