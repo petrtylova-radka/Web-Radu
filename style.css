@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap&subset=latin-ext');
 
 :root {
     /* Brand Colors */
@@ -51,7 +51,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body {
@@ -92,7 +92,8 @@ p {
     margin-bottom: var(--spacing-s);
     max-width: 65ch;
     /* Optimal looking reading width */
-    color: var(--color-text-light);
+    color: var(--color-text-main);
+    font-size: 1.05rem;
 }
 
 a {
@@ -152,7 +153,7 @@ section {
     align-items: center;
     justify-content: center;
     padding: 1rem 2.5rem;
-    border-radius: 50px;
+    border-radius: 20px;
     font-weight: 600;
     font-size: 1.1rem;
     cursor: pointer;
@@ -181,6 +182,8 @@ section {
 .btn-outline:hover {
     background-color: var(--color-primary);
     color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(79, 0, 109, 0.2);
 }
 
 /* Navbar */
@@ -208,24 +211,21 @@ nav .container {
 }
 
 
-/* Logo Refinement - Stark Contrast */
+/* Logo Refinement */
 .logo a {
-    font-family: var(--font-main);
-    font-weight: 700;
-    font-size: 1.6rem;
-    color: #000;
-    /* Deep black for main part */
-    text-transform: uppercase;
-    letter-spacing: -0.5px;
     display: flex;
     align-items: center;
 }
 
-.logo span {
-    color: var(--color-primary);
-    /* Purple for accent */
-    font-weight: 300;
-    /* Light weight for contrast */
+.nav-logo {
+    height: 60px; /* Sensible default height */
+    width: auto;
+    border-radius: 0 !important; /* Ensure no border radius on the logo */
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover .nav-logo {
+    transform: scale(1.05);
 }
 
 /* Modern Text Highlight - Clearer Black/Purple Gradient */
@@ -285,13 +285,13 @@ nav .container {
 
 /* Hero Section */
 .hero {
-    min-height: 90vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     background: var(--gradient-brand);
     position: relative;
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 80px; /* Space for the overlap */
     overflow: hidden;
 }
 
@@ -397,12 +397,82 @@ nav .container {
     }
 }
 
+/* Overlapping Hero Benefits Section */
+.hero-benefits-wrapper {
+    position: relative;
+    z-index: 20;
+    margin-top: -40px; /* Pulls it up into the hero, was -80px */
+}
+
+.hero-bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-m);
+    width: 100%;
+}
+
+.hero-bento .bento-card {
+    padding: var(--spacing-m);
+    background: var(--color-white);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(79, 0, 109, 0.05);
+    border-radius: var(--border-radius-main);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.hero-bento .bento-card:hover {
+    transform: translateY(-5px);
+}
+
+.hero-bento .bento-content i {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.hero-bento .bento-content h4 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.hero-bento .bento-content p {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+@media (max-width: 1024px) {
+    .hero-bento {
+        gap: var(--spacing-s);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-benefits-wrapper {
+        margin-top: -30px;
+        padding: 0 15px;
+    }
+    
+    .hero-bento.bento-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adjust the following section */
+.section-problem {
+    padding-top: 50px; /* Reduced from 100px */
+}
+
 /* Unified Problem & Solution Section */
 .section-problem {
     background: var(--gradient-brand);
     padding-bottom: var(--spacing-xl);
     position: relative;
-    overflow: hidden;
+    /* Removed overflow: hidden to allow decorative elements overlap */
 }
 
 .section-problem h2.section-title {
@@ -445,8 +515,10 @@ nav .container {
     padding: var(--spacing-m);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    text-align: center; /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+    text-align: center;
+    /* Center content horizontally */
 }
 
 .bento-card:hover {
@@ -479,7 +551,7 @@ nav .container {
 }
 
 .bento-content p {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--color-text-light);
     margin: 0;
     max-width: 90%;
@@ -679,9 +751,7 @@ nav .container {
         /* Slide up on mobile */
     }
 
-    .service-step:nth-child(even) {
-        /* No specific override needed if column */
-    }
+    /* No specific override needed if column */
 
     .service-marker {
         left: 30px;
@@ -702,17 +772,15 @@ nav .container {
 
 /* Solution Part - now integrated visually */
 .solution-wrapper {
-    margin-top: var(--spacing-l);
-    background: rgba(245, 231, 222, 0.3);
-    border-radius: var(--border-radius-main);
-    padding: var(--spacing-l);
+    margin-top: var(--spacing-l); /* Reduced from xl */
     position: relative;
     z-index: 2;
 }
 
 .solution-wrapper .grid-2 {
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.6fr 0.9fr; /* Slightly more space for text, less for image */
     align-items: center;
+    gap: var(--spacing-l);
 }
 
 .solution-text h2 {
@@ -731,10 +799,17 @@ nav .container {
     margin-bottom: 2.5rem;
 }
 
+.solution-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
 .solution-list li {
     display: flex;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 1rem;
 }
 
@@ -749,14 +824,16 @@ nav .container {
 }
 
 .solution-image img {
-    width: 100%;
+    width: 85%; /* Reduced size */
+    margin: 0 auto;
+    display: block;
     border-radius: var(--border-radius-main);
     box-shadow: var(--shadow-soft);
 }
 
 .solution-square {
     position: absolute;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     z-index: 3;
@@ -766,7 +843,8 @@ nav .container {
 .solution-square-1 {
     width: 100px;
     height: 100px;
-    background: rgba(236, 183, 69, 0.5); /* Yellow accent */
+    background: rgba(236, 183, 69, 0.5);
+    /* Yellow accent */
     top: -30px;
     left: -40px;
     border-radius: var(--border-radius-sm);
@@ -775,7 +853,8 @@ nav .container {
 .solution-square-2 {
     width: 120px;
     height: 120px;
-    background: rgba(79, 0, 109, 0.4); /* Primary color */
+    background: rgba(79, 0, 109, 0.4);
+    /* Primary color */
     bottom: -30px;
     right: -50px;
     border-radius: var(--border-radius-main);
@@ -785,7 +864,7 @@ nav .container {
 /* Decorative Squares in Problem Section */
 .problem-square {
     position: absolute;
-    z-index: 1;
+    z-index: 30;
     opacity: 0.6;
     border-radius: 8px;
     animation: float 8s ease-in-out infinite;
@@ -795,7 +874,7 @@ nav .container {
     width: 100px;
     height: 100px;
     background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
-    top: 10%;
+    top: -50px;
     left: 5%;
     transform: rotate(15deg);
 }
@@ -816,8 +895,6 @@ nav .container {
     background: rgba(79, 0, 109, 0.05);
     top: 40%;
     left: 20%;
-    border-radius: 50%;
-    /* Circle variant */
     animation-duration: 12s;
 }
 
@@ -851,7 +928,7 @@ nav .container {
 
 .testimonial-text {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--color-text-main);
     margin-bottom: var(--spacing-s);
 }
@@ -860,6 +937,22 @@ nav .container {
     display: block;
     color: var(--color-primary);
     font-size: 1.1rem;
+}
+
+.testimonial-author span {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+}
+
+.testimonial-author a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.testimonial-author a:hover {
+    color: var(--color-primary-dark);
 }
 
 /* About / CTA Section */
@@ -902,6 +995,25 @@ nav .container {
     margin-bottom: var(--spacing-m);
 }
 
+.footer-col i {
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+
+.footer-col i.bi-envelope {
+    color: var(--color-white);
+}
+
+.footer-col p a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure social icons don't inherit the purple color when they are on a purple background */
+.footer-socials a i {
+    color: var(--color-white);
+    margin-right: 0;
+}
+
 .footer-links li {
     margin-bottom: 0.8rem;
 }
@@ -928,7 +1040,7 @@ nav .container {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-primary);
     border-radius: 50%;
     font-size: 1.5rem;
     color: var(--color-white);
@@ -936,7 +1048,8 @@ nav .container {
 }
 
 .footer-socials a:hover {
-    background: var(--color-primary);
+    background: transparent;
+    border: 1px solid var(--color-white);
     transform: scale(1.1);
 }
 
@@ -946,6 +1059,11 @@ nav .container {
     text-align: center;
     font-size: 0.9rem;
     color: #666;
+}
+
+.footer-bottom p {
+    max-width: none;
+    margin: 0 auto;
 }
 
 /* Mobile */
@@ -979,6 +1097,11 @@ nav .container {
         /* Hide on smaller screens or stack if preferred */
     }
 
+    .hero {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-m);
@@ -1003,5 +1126,78 @@ nav .container {
 
     .hamburger {
         display: block;
+    }
+
+    /* Hide decorative squares on mobile/tablet */
+    .hero-square,
+    .problem-square,
+    .solution-square {
+        display: none !important;
+    }
+
+    /* Ensure solution grid is single column and hide its image */
+    .solution-wrapper .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-image {
+        display: none !important;
+    }
+
+    /* Wrap image in about me and center it */
+    .section-about .text-center > div {
+        display: block !important;
+        margin: 0 auto;
+    }
+
+    /* Button consistent width and centering on mobile */
+    .btn {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+    }
+
+    .solution-btns {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 0; /* Gap is handled by btn margins now if needed, but let's keep it clean */
+    }
+
+    .solution-btns .btn {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Keep about text left aligned but center its button */
+    .section-about {
+        text-align: left !important;
+    }
+
+    .section-about div {
+        text-align: left !important;
+    }
+
+    /* Headings on mobile */
+    h2, .text-center h2 {
+        text-align: left !important;
+    }
+
+    h2.text-center-mobile {
+        text-align: center !important;
+    }
+
+    /* Single column testimonials on mobile */
+    .testimonials-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Moderate gap before hero benefits on mobile */
+    .hero-benefits-wrapper {
+        margin-top: -35px !important;
     }
 }

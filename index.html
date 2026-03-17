@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/jpeg" href="Obrazky/favicon.jpg">
     <link rel="canonical" href="https://radkapetrtylova.cz/">
 </head>
 
@@ -27,17 +27,18 @@
     <nav id="navbar">
         <div class="container">
             <div class="logo">
-                <a href="index.html">Radka<span>Petrtýlová</span></a>
+                <a href="index.html">
+                    <img src="Obrazky/logo-01.png" alt="Radka Petrtýlová Logo" class="nav-logo">
+                </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Domů</a></li>
                 <li><a href="chci-web.html">Chci web</a></li>
                 <li><a href="chci-podcast.html">Podcast</a></li>
                 <li><a href="chci-emailing.html">E-mailing</a></li>
                 <li><a href="akce.html">Akce</a></li>
                 <li><a href="o-mne.html">O mně</a></li>
                 <li><a href="kontakt.html" class="btn btn-primary"
-                        style="padding: 0.5rem 1.5rem; font-size: 1rem;">Kontakt</a></li>
+                        style="padding: 0.5rem 1.5rem; font-size: 1.1rem;">Kontakt</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span><span></span><span></span>
@@ -49,97 +50,107 @@
     <header class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Vyřeším <span class="text-gradient">technické zázemí</span> online podnikání za vás</h1>
+                <h1>Vyřeším <span class="text-gradient">technické zázemí</span> vašeho online podnikání</h1>
                 <p class="hero-intro">Postavím vám web, rozjedu podcast a nastavím systémy tak,
                     aby všechno fungovalo.</p>
-                <div style="margin-top: 2rem;">
-                    <a href="kontakt.html" class="btn btn-primary">Domluvit seznamovací call</a>
-                </div>
+
             </div>
             <div class="hero-image">
                 <div class="hero-square hero-square-1"></div>
                 <div class="hero-square hero-square-2"></div>
                 <img src="Obrazky/Hlavni/foto-02.jpg" alt="Radka Petrtýlová">
             </div>
-        </div>
     </header>
 
-    <!-- Unified Problem & Solution Section -->
-    <section class="section-problem">
-        <!-- Decorative Elements -->
-        <div class="problem-square problem-square-1"></div>
-        <div class="problem-square problem-square-2"></div>
-        <div class="problem-square problem-square-3"></div>
-
+    <!-- Overlapping Benefits Section -->
+    <div class="hero-benefits-wrapper">
         <div class="container">
-            <!-- Constrained Heading -->
-            <h2 class="text-center section-title">Věnujte se svému byznysu, <span class="text-gradient">techniku nechte na mně</span></h2>
-
-            <!-- Bento Grid Pain Points -->
-            <div class="bento-grid">
-                <div class="bento-card card-main">
-                    <div class="bento-content">
-                        <i class="bi bi-graph-up-arrow"></i>
-                        <h4>Vaše podnikání roste, ale...</h4>
-                        <p>...místo tvoření se věnujete technikáliím a nastavování, které vás brzdí.</p>
-                    </div>
-                </div>
+            <div class="bento-grid hero-bento">
                 <div class="bento-card card-sub">
                     <div class="bento-content">
                         <i class="bi bi-laptop"></i>
-                        <h4>Vyladěný web</h4>
+                        <h4>Vytvořím vyladěný web</h4>
                         <p>Rychlý a přehledný web, který prodává.</p>
                     </div>
                 </div>
                 <div class="bento-card card-sub">
                     <div class="bento-content">
                         <i class="bi bi-envelope-paper-heart"></i>
-                        <h4>Funkční e-mailing</h4>
+                        <h4>Zajistím funkční e-mailing</h4>
                         <p>Aby e-maily nepadaly do spamu.</p>
                     </div>
                 </div>
                 <div class="bento-card card-sub">
                     <div class="bento-content">
                         <i class="bi bi-mic-fill"></i>
-                        <h4>Váš hlas slyšet</h4>
-                        <p>Kompletní produkce podcastu.</p>
+                        <h4>Rozjedu podcast</h4>
+                        <p>Aby o vás bylo slyšet.</p>
                     </div>
                 </div>
             </div>
+            <div align="center" style="margin-top: 4rem; padding-bottom: 2rem;">
+                <!-- Změnou čísla u font-size (např. 4rem) ikonu zvětšíte nebo zmenšíte -->
+                <i class="bi bi-graph-up-arrow"
+                    style="font-size: 3.5rem; color: var(--color-primary); display: block; margin-bottom: 1rem;"></i>
+                <h2 class="text-center-mobile">Vaše podnikání roste, ale...</h2>
+                <p style="max-width: 600px; margin: 0 auto;">...místo tvoření se věnujete technikáliím a nastavování,
+                    které vás brzdí?</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Unified Problem & Solution Section -->
+    <section class="section-problem">
+        <!-- Decorative Elements -->
+
+        <div class="problem-square problem-square-2"></div>
+
+
+        <div class="container">
 
             <!-- Integrated Solution Block -->
             <div class="solution-wrapper">
                 <div class="grid grid-2">
                     <div class="solution-text">
-                        <h2>Tohle všechno můžu <span class="text-gradient">převzít za vás</span></h2>
-                        <p>Hlídám návaznosti, nastavuji systémy a držím věci v chodu, abyste se vy mohla vrátit k tomu, co vás skutečně živí a baví.</p>
+                        <h2>Věnujte se svému byznysu, <span class="text-gradient">techniku nechte
+                                na mně</span></h2>
+                        <p>Hlídám návaznosti, nastavuji systémy a držím věci v chodu, abyste se vy mohla vrátit k tomu,
+                            co vás skutečně živí a baví.</p>
                         <ul class="solution-list">
                             <li><i class="bi bi-check-circle-fill"></i> Nastavím technické propojení</li>
                             <li><i class="bi bi-check-circle-fill"></i> Pohlídám, aby vše fungovalo</li>
                             <li><i class="bi bi-check-circle-fill"></i> Uvolním vám ruce pro tvorbu</li>
                         </ul>
-                        <a href="kontakt.html" class="btn btn-primary">Zjistit jak vám mohu pomoci</a>
+                        <div class="solution-btns">
+                            <a href="kontakt.html" class="btn btn-primary">Domluvit nezávazný hovor</a>
+                            <a href="kontakt.html" class="btn btn-outline">Domluvit technickou konzultaci</a>
+                        </div>
                     </div>
                     <div class="solution-image">
                         <div class="solution-square solution-square-1"></div>
-                        <div class="solution-square solution-square-2"></div>
+
                         <img src="Obrazky/O_mne/foto-04.jpg" alt="Radka Petrtýlová">
                     </div>
                 </div>
             </div>
+
+
         </div>
     </section>
 
     <!-- Services Pathway -->
-    <section id="sluzby" style="background: #fafafa; position: relative; overflow: hidden;">
+    <section id="sluzby" style="background: #fafafa; position: relative;">
         <!-- High Contrast Floating Elements -->
-        <div class="service-float service-float-1"></div>
-        <div class="service-float service-float-2"></div>
-        <div class="service-float service-float-3"></div>
+
+        <div class="problem-square problem-square-2"></div>
+        <div class="problem-square problem-square-1" style="top: 40%; left: 10%;"></div>
 
         <div class="container">
             <h2 class="text-center" style="max-width: 800px; margin: 0 auto 4rem auto; position: relative; z-index: 2;">
-                Pomůžu vám postavit funkční<br> ekosystém vašeho online podnikání</h2>
+                Pomůžu vám postavit <span class="text-gradient">funkční ekosystém</span>
+            </h2>
 
             <div class="service-path">
 
@@ -149,8 +160,7 @@
                         <h3>1. Webovky jako základ</h3>
                         <p>Vytvořím vám rychlý a přehledný web, který je základním kamenem vašeho online světa. Bude to
                             vaše vizitka i prodejní nástroj.</p>
-                        <a href="chci-web.html" class="btn btn-outline"
-                            style="margin-top: 1rem; border-radius: 20px; font-size: 1rem;">Chci web</a>
+                        <a href="chci-web.html" class="btn btn-outline" style="margin-top: 1rem;">Chci web</a>
                     </div>
                     <div class="service-marker"><i class="bi bi-laptop"></i></div>
                     <div style="width: 45%;"></div> <!-- Spacer -->
@@ -164,8 +174,8 @@
                         <h3>2. E-mailing pro komunikaci</h3>
                         <p>Propojím a nastavím e-mailing tak, aby měl vysokou doručitelnost. Vaše kontakty budou v
                             bezpečí a vy můžete budovat vztah.</p>
-                        <a href="chci-emailing.html" class="btn btn-outline"
-                            style="margin-top: 1rem; border-radius: 20px; font-size: 1rem;">Chci e-mailing</a>
+                        <a href="chci-emailing.html" class="btn btn-outline" style="margin-top: 1rem;">Chci
+                            e-mailing</a>
                     </div>
                 </div>
 
@@ -174,9 +184,8 @@
                     <div class="service-content">
                         <h3>3. Podcast pro dosah</h3>
                         <p>Kompletně vám zpracuji podcast. Vy jen nahráváte, o technickou stránku a distribuci se
-                            postarám já. Ať váš hlas je slyšet!</p>
-                        <a href="chci-podcast.html" class="btn btn-outline"
-                            style="margin-top: 1rem; border-radius: 20px; font-size: 1rem;">Chci podcast</a>
+                            postarám já. Ať je váš hlas slyšet!</p>
+                        <a href="chci-podcast.html" class="btn btn-outline" style="margin-top: 1rem;">Chci podcast</a>
                     </div>
                     <div class="service-marker"><i class="bi bi-mic"></i></div>
                     <div style="width: 45%;"></div> <!-- Spacer -->
@@ -189,34 +198,46 @@
     <!-- Testimonials (Graphic Style) -->
     <section class="section-testimonials">
         <div class="container">
-            <h2 class="text-center" style="margin-bottom: 3rem;">Tyto reference od svých klientek dostávám</h2>
+            <h2 class="text-center" style="margin-bottom: 3rem;">Tyto <span class="text-gradient">reference</span> od
+                svých klientek dostávám</h2>
             <div class="testimonials-grid">
 
                 <div class="card-testimonial">
-                    <p class="testimonial-text">"Radka je přesně ten typ člověka, se kterým máš pocit, že všechno jde
-                        hravě. Je nadšená, veselá a její energie tě okamžitě přepne do módu „tohle zvládneme s
-                        lehkostí“."</p>
+                    <h4 style="color: var(--color-text-main);">Hotový poklad pro start podcastu</h4>
+                    <p class="testimonial-text">Radka je hotový poklad, nemohla jsem si přát lepší pravou ruku při
+                        startování podcastu. Radka za mě vše zařídila, nastavila, udělala i
+                        grafiku. Samotné by mi to trvalo dny, ale Radka vše zvládla v rámci několika hodin. Doporučuji
+                        všemi deseti!</p>
                     <div class="testimonial-author">
-                        <strong>Zuzka Vařeková Stránská</strong>
-                        <span>Copywriterka</span>
+                        <strong>Petra Dvořáková</strong>
+                        <span>Fitness trenérka</span>
+                        <span><a href="https://www.petra-dvorakova.cz/"
+                                target="_blank">www.petra-dvorakova.cz</a></span>
                     </div>
                 </div>
 
                 <div class="card-testimonial">
-                    <p class="testimonial-text">"Vždycky mi přišlo neuvěřitelné, co všechno máš pod palcem. Jak moc jsou
-                        ti ty technické věci přirozené. Je to pro mě fascinující."</p>
+                    <h4 style="color: var(--color-text-main);">Srozumitelná a profesionální tvorba webu</h4>
+                    <p class="testimonial-text">Jsem moc ráda, že jsem se rozhodla svěřit tvorbu webu právě Radce.
+                        Spolupráce probíhala v klidu, srozumitelně a bez zbytečných komplikací. Oceňuji její
+                        profesionalitu, technickou jistotu, rychlou komunikaci i ochotu ladit detaily. Měla jsem pocit,
+                        že se mohu spolehnout – a to je pro mě důležité.</p>
                     <div class="testimonial-author">
-                        <strong>Kláři Čechová</strong>
-                        <span>Podpora pro zákazníky</span>
+                        <strong>Věra Bundilová</strong>
+                        <span>Kraniosakrální terapie</span>
+                        <span><a href="https://www.kraniohranice.cz" target="_blank">www.kraniohranice.cz</a></span>
                     </div>
                 </div>
 
                 <div class="card-testimonial">
-                    <p class="testimonial-text">"Díky Alchymii a taky tvojí práci jsem zjistila, že prostě to, co
-                        děláš ty, prostě není moje. Že je potřeba, aby takovou práci dělali jiní a pokud
-                        možno nejlíp tak skvěle jako ty!"</p>
+                    <h4 style="color: var(--color-text-main);">Maximální spolehlivost a dechberoucí systém</h4>
+                    <p class="testimonial-text">Na Raduš je maximální spolehnutí, co řekne, to platí. A její
+                        systematičnost je dechberoucí. A navede vás i když si nevíte úplně rady.</p>
                     <div class="testimonial-author">
-                        <strong>Klientka Alchymie</strong>
+                        <strong>Petra Dokoupilová</strong>
+                        <span>Ženské kruhy a rituály na míru</span>
+                        <span><a href="https://www.kouzelnykruhzivota.cz"
+                                target="_blank">www.kouzelnykruhzivota.cz</a></span>
                     </div>
                 </div>
 
@@ -227,36 +248,57 @@
     <!-- About / Collaboration CTA -->
     <section class="section-about">
         <div class="container">
-            <div class="grid grid-2"
-                style="align-items: center; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); padding: 3rem; border-radius: 20px;">
+            <div class="grid grid-2" style="align-items: center;">
                 <div>
-                    <h3>Spolupráci můžeme navázat dvěma způsoby</h3>
-                    <p>Buď vám pomohu s konkrétní částí, která vás brzdí. Anebo budu vaším dlouhodobým technickým
-                        backupem.</p>
-                    <p><strong>Aktuálně mám kapacitu jen na 2 projekty. Sedneme si?</strong></p>
-                    <a href="kontakt.html" class="btn btn-primary" style="margin-top: 1.5rem;">Domluvit seznamovací
-                        call</a>
+                    <h2>V technickém světě se pohybuji <span class="text-gradient">s&nbsp;přirozenou lehkostí</span>
+                    </h2>
+                    <p>Moje kariéra začala v prostředí, kde bylo potřeba rozumět technice i lidem zároveň.
+                        <strong>Překládala
+                            jsem požadavky zákazníků do řeči ajťáků</strong> – a složitá technická vysvětlení zpátky do
+                        srozumitelného jazyka.
+                    </p>
+                    <p>Dnes tuto dovednost používám v online podnikání. <strong>Nezahlcuji vás tím, co vědět
+                            nepotřebujete.</strong> Hlídám návaznosti, dotahuji detaily a přemýšlím technicky tak,
+                        abyste vy
+                        nemusely.</p>
+
+                    <p><strong>Spolupracuji s podnikatelkami, které už na to nechtějí být
+                            samy</strong>.
+                    </p>
+                    <a href="o-mne.html" class="btn btn-primary" style="margin-top: 1.5rem;">Číst více o mé cestě</a>
                 </div>
                 <div class="text-center">
-                    <img src="Obrazky/O_mne/foto-04.jpg" alt="Radka profilovka"
-                        style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; margin: 0 auto; border: 5px solid white;">
+                    <div style="position: relative; display: inline-block;">
+                        <div class="solution-square solution-square-1"
+                            style="top: -20px; left: -20px; width: 60px; height: 60px; border-radius: 12px;"></div>
+                        <div class="hero-square hero-square-2"
+                            style="bottom: -20px; right: -20px; width: 80px; height: 80px; border-radius: 16px;"></div>
+                        <img src="Obrazky/O_mne/foto-06.jpg" alt="Radka profilovka"
+                            style="width: 100%; max-width: 320px; border-radius: var(--border-radius-main); object-fit: cover; margin: 0 auto; box-shadow: var(--shadow-soft); position: relative; z-index: 2;">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding-top: 0;">
-        <div class="container text-center">
-            <div style="max-width: 800px; margin: 0 auto;">
-                <h2>V technickém světě se pohybuji s přirozenou lehkostí.</h2>
-                <p>Moje kariéra začala v prostředí, kde bylo potřeba rozumět technice i lidem zároveň. Překládala jsem
-                    požadavky zákazníků do řeči ajťáků...</p>
-                <a href="o-mne.html"
-                    style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Číst více o mé
-                    cestě &rarr;</a>
-            </div>
+    <!-- CTA Section -->
+    <section class="section-cta"
+        style="background: var(--color-secondary); padding: 5rem 0; position: relative; overflow: hidden;">
+        <div class="container text-center" style="position: relative; z-index: 2;">
+            <h3 style="margin-bottom: 1.5rem;">Nejste si jistá, <span class="text-gradient">jestli vyřeším</span> i váš
+                problém?</h3>
+            <p style="max-width: 700px; margin: 0 auto 2.5rem auto; font-size: 1.2rem; color: var(--color-text-main);">
+                Vyberte si termín pro 30minutový nezávazný hovor a probereme, co potřebujete.
+            </p>
+            <a href="kontakt.html" class="btn btn-primary"
+                style="padding: 1.2rem 3rem; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(79, 0, 109, 0.25);">Domluvit
+                nezávazný hovor</a>
         </div>
+        <!-- Subtle decorative element -->
+        <div class="problem-square problem-square-1" style="top: -30px; right: 10%; opacity: 0.2;"></div>
     </section>
+
+
 
     <!-- Modern Footer -->
     <footer class="footer-modern">
@@ -265,7 +307,7 @@
                 <div class="footer-col">
                     <h3 style="color: var(--color-white);">Radka Petrtýlová</h3>
                     <p style="color: #ccc; max-width: 300px;">Expertka na technické zázemí pro online podnikatelky.
-                        Weby, podcasty, mailingy.</p>
+                        Weby, podcasty, e-mailing.</p>
                     <div class="footer-socials">
                         <a href="https://www.facebook.com/petrtylova.radu" target="_blank"><i
                                 class="bi bi-facebook"></i></a>
@@ -282,31 +324,27 @@
                         <li><a href="chci-web.html">Tvorba webu</a></li>
                         <li><a href="chci-podcast.html">Produkce podcastů</a></li>
                         <li><a href="chci-emailing.html">Nastavení e-mailingu</a></li>
-                        <li><a href="akce.html">Akce</a></li>
+
                         <li><a href="kontakt.html">Kontakt</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h3>Kontakt & Fakturace</h3>
-                    <p><i class="bi bi-envelope" style="margin-right: 10px;"></i> <a
-                            href="mailto:jsem@radkapetrtylova.cz" style="color:white;">jsem@radkapetrtylova.cz</a></p>
-                    <p><i class="bi bi-telephone" style="margin-right: 10px;"></i> +420 736 282 264</p>
+                    <p><i class="bi bi-envelope" style="margin-right: 10px;" color="white"></i> <a
+                            href="mailto:radu@pruvodkyneweby.cz" style="color:white;">radu@pruvodkyneweby.cz</a></p>
+
                     <br>
                     <p style="font-size: 0.9rem; color: #888;">
                         <strong>IČ:</strong> 19799250<br>
                         <strong>Sídlo:</strong> Větrná 1059/34, Odry, 74235<br>
-                        Zápis v živnostenském rejstříku.
-                    </p>
-                    <p style="margin-top: 1rem;">
-                        <a href="kontakt.html" class="btn btn-primary"
-                            style="padding: 0.5rem 1rem; font-size: 0.9rem;">Domluvit konzultaci</a>
+                        Fyzická osoba zapsaná v živnostenském rejstříku vedeném Městským úřadem v Odrách.
                     </p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Radka Petrtýlová. Všechna práva vyhrazena. | Vytvořeno s lehkostí.</p>
+                <p>&copy; 2026 | Zaměřeno na detaily. Vytvořeno se špetkou technické magie. ✨</p>
             </div>
         </div>
     </footer>
