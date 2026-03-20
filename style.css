@@ -218,9 +218,11 @@ nav .container {
 }
 
 .nav-logo {
-    height: 60px; /* Sensible default height */
+    height: 60px;
+    /* Sensible default height */
     width: auto;
-    border-radius: 0 !important; /* Ensure no border radius on the logo */
+    border-radius: 0 !important;
+    /* Ensure no border radius on the logo */
     transition: transform 0.3s ease;
 }
 
@@ -291,7 +293,8 @@ nav .container {
     background: var(--gradient-brand);
     position: relative;
     padding-top: 100px;
-    padding-bottom: 80px; /* Space for the overlap */
+    padding-bottom: 80px;
+    /* Space for the overlap */
     overflow: hidden;
 }
 
@@ -401,7 +404,8 @@ nav .container {
 .hero-benefits-wrapper {
     position: relative;
     z-index: 20;
-    margin-top: -40px; /* Pulls it up into the hero, was -80px */
+    margin-top: -40px;
+    /* Pulls it up into the hero, was -80px */
 }
 
 .hero-bento {
@@ -456,7 +460,7 @@ nav .container {
         margin-top: -30px;
         padding: 0 15px;
     }
-    
+
     .hero-bento.bento-grid {
         grid-template-columns: 1fr;
     }
@@ -464,7 +468,8 @@ nav .container {
 
 /* Adjust the following section */
 .section-problem {
-    padding-top: 50px; /* Reduced from 100px */
+    padding-top: 50px;
+    /* Reduced from 100px */
 }
 
 /* Unified Problem & Solution Section */
@@ -772,13 +777,15 @@ nav .container {
 
 /* Solution Part - now integrated visually */
 .solution-wrapper {
-    margin-top: var(--spacing-l); /* Reduced from xl */
+    margin-top: var(--spacing-l);
+    /* Reduced from xl */
     position: relative;
     z-index: 2;
 }
 
 .solution-wrapper .grid-2 {
-    grid-template-columns: 1.6fr 0.9fr; /* Slightly more space for text, less for image */
+    grid-template-columns: 1.6fr 0.9fr;
+    /* Slightly more space for text, less for image */
     align-items: center;
     gap: var(--spacing-l);
 }
@@ -824,7 +831,8 @@ nav .container {
 }
 
 .solution-image img {
-    width: 85%; /* Reduced size */
+    width: 85%;
+    /* Reduced size */
     margin: 0 auto;
     display: block;
     border-radius: var(--border-radius-main);
@@ -1058,12 +1066,13 @@ nav .container {
     padding-top: var(--spacing-m);
     text-align: center;
     font-size: 0.9rem;
-    color: #666;
+    color: #888;
 }
 
 .footer-bottom p {
     max-width: none;
     margin: 0 auto;
+    color: #888;
 }
 
 /* Mobile */
@@ -1145,7 +1154,7 @@ nav .container {
     }
 
     /* Wrap image in about me and center it */
-    .section-about .text-center > div {
+    .section-about .text-center>div {
         display: block !important;
         margin: 0 auto;
     }
@@ -1165,7 +1174,8 @@ nav .container {
         display: flex;
         align-items: center;
         width: 100%;
-        gap: 0; /* Gap is handled by btn margins now if needed, but let's keep it clean */
+        gap: 0;
+        /* Gap is handled by btn margins now if needed, but let's keep it clean */
     }
 
     .solution-btns .btn {
@@ -1183,7 +1193,8 @@ nav .container {
     }
 
     /* Headings on mobile */
-    h2, .text-center h2 {
+    h2,
+    .text-center h2 {
         text-align: left !important;
     }
 
