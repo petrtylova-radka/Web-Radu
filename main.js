@@ -40,18 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.glass, .bento-item, .service-step, .event-card').forEach(el => {
-        // el.style.opacity = '0'; // Handled in CSS now for service-step
-        // el.style.transform = 'translateY(20px)';
-        // el.style.transition = 'all 0.6s ease-out';
+    document.querySelectorAll('.glass, .bento-item, .service-step, .event-card, .solution-list li').forEach(el => {
         observer.observe(el);
     });
 
-    // Reveal animation implementation
-    window.addEventListener('scroll', () => {
-        document.querySelectorAll('.revealed').forEach(el => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
+    // CSS handles the reveal animation via the .revealed class.
+
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+
+            // Optionally close other items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+
+            faqItem.classList.toggle('active');
         });
     });
 });

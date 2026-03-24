@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkce podcastů | Radka Petrtýlová</title>
+    <meta name="description"
+        content="Rozjedu váš podcast. Od střihu po distribuci na Spotify a Apple Podcasts. Vy mluvte, techniku nechte na mně.">
+
+    <meta property="og:title" content="Produkce podcastů | Radka Petrtýlová">
+    <meta property="og:description"
+        content="Kompletní produkce vašeho podcastu. Profesionální epizody bez technických starostí.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://radkapetrtylova.cz/chci-podcast.html">
+    <meta property="og:image" content="https://radkapetrtylova.cz/Obrazky/Chci_rozjet_podcast/foto-01.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/jpeg" href="Obrazky/favicon.jpg">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Obrazky/logo-01.png" alt="Radka Petrtýlová Logo" class="nav-logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="chci-web.html">Chci web</a></li>
+                <li><a href="chci-emailing.html">E-mailing</a></li>
+                <li><a href="chci-podcast.html" class="active">Podcast</a></li>
+                <!-- <li><a href="akce.html">Akce</a></li> -->
+                <li><a href="o-mne.html">O Radu</a></li>
+                <li><a href="kontakt.html" class="btn btn-primary"
+                        style="padding: 0.5rem 1.5rem; font-size: 1.1rem;">Kontakt</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 style="font-size: clamp(2rem, 4vw, 3rem);">Rozjedu váš <span class="text-gradient">podcast</span>
+                </h1>
+                <p class="hero-intro">Vy mluvte. Já z vašich materiálů vytvořím profesionální epizody a postarám se o
+                    jejich distribuci.</p>
+                <div class="hero-btns" style="margin-top: 2rem;">
+                    <a href="#kontakt" class="btn btn-primary">Chci rozjet podcast</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-square hero-square-1"></div>
+                <div class="hero-square hero-square-2"></div>
+                <img src="Obrazky/Chci_rozjet_podcast/foto-01.jpg" alt="Produkce podcastů Radka Petrtýlová"
+                    style="max-height: 500px; object-fit: cover; object-position: center;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Details Section -->
+    <section class="section-details" style="background: var(--color-white);">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+                <div>
+                    <h2 style="margin-bottom: 2rem;">Pomůžu vám z jedné epizody <span class="text-gradient">vytěžit
+                            maximum</span></h2>
+                    <p>Vám stačí sdílet své myšlenky a nahrávat další epizody. To ostatní už zařídím za vás:</p>
+                    <ul class="solution-list">
+
+                        <li><i class="bi bi-music-note-beamed"></i> Vytvořím intro i outro s hudebním pokresem</li>
+                        <li><i class="bi bi-scissors"></i> Vystříhám dlouhé mezery a výplňková slova</li>
+                        <li><i class="bi bi-broadcast"></i> Naplánuji publikaci epizod napříč platformami</li>
+                        <li><i class="bi bi-laptop"></i> Nastavím automatizované zveřejnění na webu</li>
+                    </ul>
+                </div>
+                <div class="bento-card card-sub" style="padding: 3rem; background: var(--color-secondary);">
+                    <i class="bi bi-mic-fill"
+                        style="font-size: 3.5rem; color: var(--color-primary); margin-bottom: 1.5rem; display: block;"></i>
+                    <h3>Váš hlas, můj střih</h3>
+                    <p style="margin: 0 auto; max-width: 100%;">Podcast je skvělý způsob, jak budovat autoritu a hlubší
+                        vztah s vaším publikem. Nechte techniku na mně a soustřeďte se jen na to, co chcete světu
+                        sdělit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Showcase Section -->
+    <section class="section-showcase" style="background: var(--color-white); padding-bottom: 2rem;">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Podcasty, které jsem <span
+                    class="text-gradient">rozjela</span></h2>
+
+            <style>
+                .podcast-showcase-card {
+                    transition: all 0.3s ease;
+                }
+
+                .podcast-showcase-card:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 15px 35px rgba(79, 0, 109, 0.15) !important;
+                }
+
+                .podcast-showcase-card img {
+                    transition: transform 0.5s ease;
+                    border-radius: 0 !important;
+                    /* Výjimka: nezaoblené rohy */
+                }
+
+                .podcast-showcase-card:hover img {
+                    transform: scale(1.05);
+                    /* Zvětšení obrázku po najetí */
+                }
+
+                .podcast-img-wrapper {
+                    overflow: hidden;
+                    margin-bottom: 1.5rem;
+                    width: 75%;
+                    /* Zmenšení obrázků */
+                    max-width: 250px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    box-shadow: var(--shadow-soft);
+                }
+            </style>
+            <div class="grid grid-3" style="gap: 2rem;">
+                <div class="bento-card card-sub podcast-showcase-card" style="padding: 2rem; text-align: center;">
+                    <a href="http://alchymiezeny.cz/podcast/" target="_blank" style="display: block;">
+                        <div class="podcast-img-wrapper">
+                            <img src="Obrazky/Chci_rozjet_podcast/lucie-harnosova-alchymie-zeny.jpg"
+                                alt="Alchymie ženy podcast" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-text-main); font-size: 1.3rem;">Alchymie
+                            ženy</h4>
+                        <span style="color: var(--color-primary); font-weight: 600; font-size: 1rem;">Poslechnout si
+                            podcast <i class="bi bi-arrow-right"></i></span>
+                    </a>
+                </div>
+
+                <div class="bento-card card-sub podcast-showcase-card" style="padding: 2rem; text-align: center;">
+                    <a href="http://petra-dvorakova.cz/podcast" target="_blank" style="display: block;">
+                        <div class="podcast-img-wrapper">
+                            <img src="Obrazky/Chci_rozjet_podcast/petra-dvorakova-rozhybej-svuj-den.jpg"
+                                alt="Rozhýbej svůj den podcast"
+                                style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-text-main); font-size: 1.3rem;">Rozhýbej
+                            svůj den</h4>
+                        <span style="color: var(--color-primary); font-weight: 600; font-size: 1rem;">Poslechnout si
+                            podcast <i class="bi bi-arrow-right"></i></span>
+                    </a>
+                </div>
+
+                <div class="bento-card card-sub podcast-showcase-card" style="padding: 2rem; text-align: center;">
+                    <a href="http://sebevedomepodnikani.cz/podcast" target="_blank" style="display: block;">
+                        <div class="podcast-img-wrapper">
+                            <img src="Obrazky/Chci_rozjet_podcast/eva-krivankova-sebevedome-podnikani.jpg"
+                                alt="Sebevědomé podnikání podcast"
+                                style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-text-main); font-size: 1.3rem;">Sebevědomé
+                            podnikání</h4>
+                        <span style="color: var(--color-primary); font-weight: 600; font-size: 1rem;">Poslechnout si
+                            podcast <i class="bi bi-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-testimonials" style="background: #fafafa;">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Co na tuto službu říkají ženy, kterým jsem <span
+                    class="text-gradient">podcast rozjela</span></h2>
+            <div class="testimonials-grid">
+                <div class="card-testimonial">
+                    <h4 style="color: var(--color-text-main);">Hotový poklad pro start podcastu</h4>
+                    <p class="testimonial-text">Radka je hotový poklad, nemohla jsem si přát lepší pravou ruku při
+                        startování podcastu. Je to úplně poprvé, kdy jsem sebe a můj podcast svěřila do rukou někomu
+                        jinému než sobě a všechno šlape jako hodinky. Radka za mě vše zařídila, nastavila, udělala i
+                        grafiku. Samotné by mi to trvalo dny, ale s Radka vše zvládla v rámci několika hodin. Chcete
+                        taky rozjet vlastní podcast? Tak u Radky jste na jediné správné adrese! Doporučuji všemi deseti!
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Petra Dvořáková</strong>
+                        <span>Fitness trenérka</span>
+                    </div>
+                </div>
+
+                <div class="card-testimonial">
+                    <h4 style="color: var(--color-text-main);">Radka je akcelerátorka vašeho úspěchu</h4>
+                    <p class="testimonial-text">Díky Radce jsem minulý měsíc rozjela PODCAST. V naprosté lehkosti. V
+                        obrovské zábavě. A samozřejmě hezky efektivně. Chtěla jsem vlastní podcast už delší dobu, ale
+                        odrazovala mě představa technické náročnosti, spousty rozhodnutí a detailů, do kterých se mi
+                        nechtělo. Radka se mnou všechno probrala a dala mi jasné kroky k REALIZACI. V podstatě jsem
+                        nemusela udělat skoro nic, než "jen" natočit epizodu na téma, které mě bavilo. Na podcast je
+                        Radka EXPERTKOU ČÍSLO 1.</p>
+                    <div class="testimonial-author">
+                        <strong>Eva Křivánková</strong>
+                        <span>Business mentorka</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section class="section-investment"
+        style="background: var(--color-secondary); position: relative; overflow: hidden;">
+        <div class="hero-square hero-square-1"
+            style="width: 300px; height: 300px; top: -100px; right: -50px; opacity: 0.1;"></div>
+
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Kolik to <span class="text-gradient">stojí</span></h2>
+            <div class="grid grid-2" style="align-items: flex-start; gap: 4rem;">
+                <!-- Package 1 -->
+                <div class="bento-card"
+                    style="background: var(--color-white); padding: 3rem; text-align: left; align-items: flex-start; box-shadow: var(--shadow-hover);">
+                    <h3 style="margin-bottom: 0.5rem;">Spuštění podcastu: rozjezdový balíček</h3>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 1.5rem;">
+                        Cena 14 000 Kč</p>
+                    <ul class="solution-list">
+                        <li><i class="bi bi-check2-all"></i> Návrh grafiky a vizuální identity pro sdílení na sítích
+                        </li>
+                        <li><i class="bi bi-check2-all"></i> Tvorba úvodní znělky a výběr hudebního podkresu</li>
+                        <li><i class="bi bi-check2-all"></i> Kompletní zpracování 1. epizody do 30 minut</li>
+                        <li><i class="bi bi-check2-all"></i> Export a distribuce epizody na Spotify, Apple Podcasts</li>
+                        <li><i class="bi bi-check2-all"></i> Návrh řešení, jak epizody publikovat na webu</li>
+                    </ul>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="bento-card"
+                    style="background: var(--color-white); padding: 3rem; text-align: left; align-items: flex-start; box-shadow: var(--shadow-hover); height: 100%;">
+                    <h3 style="margin-bottom: 0.5rem;">Dlouhodobá spolupráce: kompletní produkce</h3>
+                    <p style="margin-bottom: 1.5rem;">Zahrnuje kompletní produkci každé epizody – od zpracování až po
+                        publikaci a výstupy.</p>
+                    <h4
+                        style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-primary);">
+                        Co
+                        každá epizoda zahrnuje:</h4>
+                    <ul class="solution-list" style="margin-bottom: 2rem;">
+                        <li><i class="bi bi-check2-all"></i> Střih a vyladění audia do 30 minut</li>
+                        <li><i class="bi bi-check2-all"></i> Popis epizody na sítě</li>
+                        <li><i class="bi bi-check2-all"></i> Banner pro sítě pro konkrétní epizodu</li>
+                        <li><i class="bi bi-check2-all"></i> Publikace na Spotify, Apple podcast, webových stránkách
+                        </li>
+                    </ul>
+                    <ul class="solution-list" style="width: 100%; border-top: 1px solid #eee;">
+                        <li
+                            style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 0.8rem 0; margin-bottom: 0;">
+                            <span>1 epizoda / měsíc</span> <strong>2 300 Kč</strong>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 0.8rem 0; margin-bottom: 0;">
+                            <span>2 epizody / měsíc</span> <strong>4 400 Kč</strong>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 0.8rem 0; margin-bottom: 0;">
+                            <span>3 epizody / měsíc</span> <strong>6 500 Kč</strong>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; align-items: center; border: 2px solid var(--color-primary); padding: 1rem; border-radius: 16px; background: rgba(79, 0, 109, 0.05); margin-top: 1rem; box-shadow: 0 10px 20px rgba(79, 0, 109, 0.1);">
+                            <span
+                                style="font-weight: 700; color: var(--color-primary); display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+                                4 epizody / měsíc
+                                <span
+                                    style="background: #ECB745; color: #4F006D; font-size: 0.7rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; box-shadow: 0 4px 10px rgba(236, 183, 69, 0.3);">NEJVÝHODNĚJŠÍ</span>
+                            </span>
+                            <strong style="color: var(--color-primary); font-size: 1.2rem;">8 000 Kč</strong>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #777;"><em>Více epizod: individuální
+                            cena</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="kontakt" class="section-cta"
+        style="background: var(--color-primary); padding: 5rem 0; color: var(--color-white);">
+        <div class="container text-center">
+            <h3 style="color: var(--color-white); margin-bottom: 1.5rem;">Takový podcast chcete taky!</h3>
+            <p style="max-width: 700px; margin: 0 auto 2.5rem auto; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
+                Klikněte na tlačítko a domluvíme se na podrobnostech.
+            </p>
+            <a href="kontakt.html" class="btn btn-primary"
+                style="background: var(--color-white); color: var(--color-primary); padding: 1.2rem 3rem; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">Chci
+                rozjet podcast</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 style="color: var(--color-white);">Mgr. Radka Petrtýlová</h3>
+                    <p style="color: #ccc; max-width: 300px;">Expertka na technické zázemí pro online podnikatelky.
+                        Weby, e-mailing, podcasty.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/petrtylova.radu" target="_blank"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/petrtylova.radka" target="_blank"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/petrtylova-radka/" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Rychlé odkazy</h3>
+                    <ul class="footer-links" style="list-style: none;">
+                        <li><a href="index.html">Úvod</a></li>
+                        <li><a href="chci-web.html">Tvorba webu</a></li>
+                        <li><a href="chci-emailing.html">Nastavení e-mailingu</a></li>
+                        <li><a href="chci-podcast.html">Produkce podcastů</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                    <a href="kontakt.html#contact-form" class="btn btn-primary"
+                        style="margin-top: 1rem; color: white !important; font-size: 0.9rem; padding: 0.7rem 1.2rem;">Domluvit
+                        nezávazný hovor</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Kontakt</h3>
+                    <p><i class="bi bi-envelope" style="margin-right: 10px;"></i> <a
+                            href="mailto:radu@pruvodkyneweby.cz" style="color:white;">radu@pruvodkyneweby.cz</a></p>
+                    <br>
+                    <p style="font-size: 0.9rem; color: #888;">
+                        <strong>IČ:</strong> 19799250<br>
+                        <strong>Sídlo:</strong> Větrná 1059/34, Odry, 74235<br>
+                        Fyzická osoba zapsaná v živnostenském rejstříku vedeném Městským úřadem v Odrách.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 | Vytvořeno se špetkou technické magie. Zaměřeno na detaily.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
