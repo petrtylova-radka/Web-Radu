@@ -61,4 +61,20 @@ document.addEventListener('DOMContentLoaded', () => {
             faqItem.classList.toggle('active');
         });
     });
+
+    // Email copy functionality
+    const copyBtn = document.querySelector('.copy-email-btn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = document.querySelector('.contact-email-link').innerText;
+            navigator.clipboard.writeText(email).then(() => {
+                const successMsg = document.querySelector('.copy-success');
+                successMsg.classList.add('show');
+                setTimeout(() => {
+                    successMsg.classList.remove('show');
+                }, 2000);
+            });
+        });
+    }
 });

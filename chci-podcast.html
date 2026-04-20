@@ -28,6 +28,10 @@
             <div class="logo">
                 <a href="index.html">
                     <img src="Obrazky/logo-01.png" alt="Radka Petrtýlová Logo" class="nav-logo">
+                    <div class="logo-name">
+                        <span>Radka</span>
+                        <span>Petrtýlová</span>
+                    </div>
                 </a>
             </div>
             <ul class="nav-links">
@@ -68,9 +72,9 @@
     </header>
 
     <!-- Details Section -->
-    <section class="section-details" style="background: var(--color-white);">
+    <section class="section-details" style="background: var(--color-white); padding-bottom: 3rem;">
         <div class="container">
-            <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+            <div class="grid grid-2" style="align-items: start; gap: 4rem;">
                 <div>
                     <h2 style="margin-bottom: 2rem;">Pomůžu vám z jedné epizody <span class="text-gradient">vytěžit
                             maximum</span></h2>
@@ -81,9 +85,12 @@
                         <li><i class="bi bi-scissors"></i> Vystříhám dlouhé mezery a výplňková slova</li>
                         <li><i class="bi bi-broadcast"></i> Naplánuji publikaci epizod napříč platformami</li>
                         <li><i class="bi bi-laptop"></i> Nastavím automatizované zveřejnění na webu</li>
+                        <li><i class="bi bi-chat-quote"></i> Navrhnu vám texty pro sociální sítě ke sdílení nové epizody
+                        </li>
                     </ul>
                 </div>
-                <div class="bento-card card-sub" style="padding: 3rem; background: var(--color-secondary);">
+                <div class="bento-card card-sub sticky-card"
+                    style="padding: 3rem; background: var(--color-secondary); text-align: center; align-items: center;">
                     <i class="bi bi-mic-fill"
                         style="font-size: 3.5rem; color: var(--color-primary); margin-bottom: 1.5rem; display: block;"></i>
                     <h3>Váš hlas, můj střih</h3>
@@ -96,7 +103,7 @@
     </section>
 
     <!-- Podcast Showcase Section -->
-    <section class="section-showcase" style="background: var(--color-white); padding-bottom: 2rem;">
+    <section class="section-showcase" style="background: var(--color-white); padding-top: 2rem; padding-bottom: 2rem;">
         <div class="container">
             <h2 class="text-center" style="margin-bottom: 3rem;">Podcasty, které jsem <span
                     class="text-gradient">rozjela</span></h2>
@@ -292,9 +299,9 @@
     <section id="kontakt" class="section-cta"
         style="background: var(--color-primary); padding: 5rem 0; color: var(--color-white);">
         <div class="container text-center">
-            <h3 style="color: var(--color-white); margin-bottom: 1.5rem;">Takový podcast chcete taky!</h3>
+            <h3 style="color: var(--color-white); margin-bottom: 1.5rem;">Máte už nějakou dobu podcast v šuplíku?</h3>
             <p style="max-width: 700px; margin: 0 auto 2.5rem auto; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
-                Klikněte na tlačítko a domluvíme se na podrobnostech.
+                Pomůžu vám ho dostat do světa! Klikněte na tlačítko a domluvíme se na podrobnostech.
             </p>
             <a href="kontakt.html" class="btn btn-primary"
                 style="background: var(--color-white); color: var(--color-primary); padding: 1.2rem 3rem; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">Chci
@@ -336,8 +343,14 @@
 
                 <div class="footer-col">
                     <h3>Kontakt</h3>
-                    <p><i class="bi bi-envelope" style="margin-right: 10px;"></i> <a
-                            href="mailto:radu@pruvodkyneweby.cz" style="color:white;">radu@pruvodkyneweby.cz</a></p>
+                    <p><i class="bi bi-envelope" style="margin-right: 10px; color: white;"></i>
+                        <a href="mailto:radu@pruvodkyneweby.cz" class="contact-email-link"
+                            style="color:white;">radu@pruvodkyneweby.cz</a>
+                        <span class="copy-email-btn" title="Kopírovat e-mail" style="position: relative;">
+                            <i class="bi bi-copy"></i>
+                            <span class="copy-success">Zkopírováno!</span>
+                        </span>
+                    </p>
                     <br>
                     <p style="font-size: 0.9rem; color: #888;">
                         <strong>IČ:</strong> 19799250<br>
